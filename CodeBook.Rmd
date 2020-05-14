@@ -1,0 +1,55 @@
+---
+title: "Getting and Cleaning Data Course Project"
+author: "Brar"
+date: "May 13, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Files 
+The unzipped file is "UCI HAR Dataset" and contains 4 .txt files and 2 subfolders:
+
+*  README.txt : Describes the experiment and the file included in the dataset.     
+*  features_info.txt : Shows information about the variables used on the feature vector.  
+*  features.txt : List of all features. Corresponds to column labels for X_train.txt and X_test.txt
+*  activity _labels.txt : Links the class labels with their activity name. Corresponds to column labels for X_train.txt and X_test.txt
+*  Train : 
+    + Intertial Signals (not used in this analysis)
+    + subject_train.txt (subject id for the x_train.txt)
+    + X_train.txt (measurements for each subject and activity)
+    + y_train.txt (class label for x_train.txt)
+        
+*  Test : 
+    + Intertial Signals (not used in this analysis)
+    + subject_test.txt (subject id for the x_test.txt)
+    + X_test.txt (measurements for each subject and activity)
+    + y_test.txt (class label for x_test.txt)
+
+
+
+## Course Project Objectives 
+
+Here are the data for the project:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+You should create one R script called run_analysis.R that does the following.
+
+* Merges the training and the test sets to create one data set.
+* Extracts only the measurements on the mean and standard deviation for each measurement.
+* Uses descriptive activity names to name the activities in the data set
+* Appropriately labels the data set with descriptive variable names.
+* From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## Final Tidy Data Description
+The output of run_analysis.R is two datasets: 
+
+data3: A dataframe of 10299 observations of 81 variables which is a produced by performing first four course objectives. col1 is the subject, col2-80 are the mean and standard devitation measurements and col 81 is the activity( WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING). 
+
+data4: A dataframe of 180 observations of 81 variables which is produced by performing all five course objectives. col1 is the subject, col2-80 are the mean and standard deviation measurement and col 81 is the activity. The rows indicate the average of each measurement for each activity and each subjet. 
+
+
+
